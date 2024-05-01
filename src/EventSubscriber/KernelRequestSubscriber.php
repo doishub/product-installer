@@ -26,8 +26,11 @@ class KernelRequestSubscriber implements EventSubscriberInterface
         $request = $e->getRequest();
 
         if ($this->scopeMatcher->isBackendRequest($request)) {
-            $GLOBALS['TL_CSS'][] = 'bundles/productinstaller/styles/backend.css|static';
-            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/productinstaller/build/main.js';
+            #$GLOBALS['TL_CSS'][] = 'bundles/productinstaller/styles/backend.css|static';
+            #$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/productinstaller/build/main.js';
+
+            $GLOBALS['TL_CSS'][] = 'bundles/productinstaller/app/style.css|static';
+            //$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/productinstaller/app/app.js';
         }
     }
 }
